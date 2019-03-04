@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Car")
@@ -31,6 +30,9 @@ public class Car {
 
 	@Column(name = "date_of_manufacture", nullable = false)
 	private LocalDate dateOfManufacture;
+
+	public Car() {
+	}
 
 	public Car(String brand, String type, LocalDate dateOfManufacture) {
 		this.brand = brand;

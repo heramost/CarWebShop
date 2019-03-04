@@ -35,6 +35,10 @@ public class Deal {
 	@Column(name = "date_of_deal", nullable = false)
 	private LocalDateTime dateOfDeal = LocalDateTime.now();
 
+	public Deal() {
+
+	}
+
 	public Deal(Car car, Customer customer, int price, int amount) {
 		this.car = car;
 		this.customer = customer;

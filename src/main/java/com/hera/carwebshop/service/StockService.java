@@ -19,4 +19,8 @@ public class StockService {
 	public Iterable<Stock> saveAll(Iterable<Stock> stocks) {
 		return repository.saveAll(stocks);
 	}
+
+	public Iterable<Stock> findAll() {
+		return repository.findAll();
+	}
 }

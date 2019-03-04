@@ -8,7 +8,6 @@ import com.hera.carwebshop.service.CustomerService;
 import com.hera.carwebshop.service.DealService;
 import com.hera.carwebshop.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -25,7 +24,10 @@ public class DataSeeder {
 	public void createSeedDataIfNeeded() {
 		if (!carService.findAll().iterator().hasNext()) {
 			Car bmw = new Car("Bmw", "328i", LocalDate.of(1991, 1, 1));
+			bmw.setZeroToSixty(7.6);
 			Car ford = new Car("Ford", "fiesta", LocalDate.of(2005, 1, 1));
+			ford.setZeroToSixty(14);
+			ford.setHasAC(true);
 			carService.save(bmw);
 			carService.save(ford);
 

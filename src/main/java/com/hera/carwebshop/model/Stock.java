@@ -31,6 +31,10 @@ public class Stock {
 	@Column(name = "date_of_last_change", nullable = false)
 	private LocalDate dateOfLastChange = LocalDate.now();
 
+	public Stock() {
+
+	}
+
 	public Stock(Car car, int stock, int price) {
 		this.car = car;
 		this.stock = stock;

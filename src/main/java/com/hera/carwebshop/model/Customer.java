@@ -21,6 +21,10 @@ public class Customer {
 	@Column(name = "address", nullable = false)
 	private String address;
 
+	public Customer() {
+
+	}
+
 	public Customer(String name, String address) {
 		this.name = name;
 		this.address = address;
