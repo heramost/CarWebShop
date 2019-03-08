@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "stock")
@@ -29,7 +29,7 @@ public class Stock {
 	private int price;
 
 	@Column(name = "date_of_last_change", nullable = false)
-	private LocalDate dateOfLastChange = LocalDate.now();
+	private LocalDateTime dateOfLastChange = LocalDateTime.now();
 
 	public Stock() {
 
@@ -73,11 +73,11 @@ public class Stock {
 		this.price = price;
 	}
 
-	public LocalDate getDateOfLastChange() {
-		return dateOfLastChange;
+	public void setDateOfLastChange(LocalDateTime dateOfLastChange) {
+		this.dateOfLastChange = dateOfLastChange;
 	}
 
-	public void setDateOfLastChange(LocalDate dateOfLastChange) {
-		this.dateOfLastChange = dateOfLastChange;
+	public LocalDateTime getDateOfLastChange() {
+		return dateOfLastChange;
 	}
 }

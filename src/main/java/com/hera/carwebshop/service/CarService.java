@@ -16,8 +16,8 @@ public class CarService {
 		return repository.save(car);
 	}
 
-	public Iterable<Car> saveAll(Iterable<Car> cars) {
-		return repository.saveAll(cars);
+	public Car get(long id) {
+		return repository.findById(id).orElse(null);
 	}
 
 	public Iterable<Car> findAll() {

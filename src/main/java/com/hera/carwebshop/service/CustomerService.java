@@ -16,7 +16,7 @@ public class CustomerService {
 		return repository.save(customer);
 	}
 
-	public Iterable<Customer> saveAll(Iterable<Customer> customers) {
-		return repository.saveAll(customers);
+	public Customer get(long id) {
+		return repository.findById(id).orElse(null);
 	}
 }
